@@ -1,20 +1,20 @@
-# Portfolio v2: Prabhudayal Vaishnav
+# aipdv.com
 
-A Neobrutalistic AI Portfolio featuring Mira, a tool-enabled voice assistant. Built with Next.js 15, TypeScript, and Google Gemini.
+A Neobrutalistic AI Portfolio featuring Mira, a tool-enabled voice assistant. Built with Next.js 15, TypeScript, and Google Gemini Live.
 
 ## Interface
 
 ![Home Page](/assets/screenshots/home-page.png)
-*Landing interface with high-contrast bento grid and interactive elements.*
+_Landing interface with high-contrast bento grid and interactive elements._
 
 ![Selected Projects](/assets/screenshots/selected-projects.png)
-*Project showcase highlighting voice-AI and computer vision systems.*
+_Project showcase highlighting voice-AI and computer vision systems._
 
 ![Resume Page](/assets/screenshots/resume-page.png)
-*Centered, optimized professional experience and education layout.*
+_Centered, optimized professional experience and education layout._
 
 ![Call Active](/assets/screenshots/call-active.png)
-*Real-time voice interaction interface with Mira.*
+_Real-time voice interaction interface with Mira._
 
 ## Core Features
 
@@ -48,6 +48,7 @@ A Neobrutalistic AI Portfolio featuring Mira, a tool-enabled voice assistant. Bu
 ## Mira Functionality
 
 Mira acts as a tool-enabled agent:
+
 - **Navigation**: Directs users to site sections via speech.
 - **Data Retrieval**: Fetches resume details directly from `constants.ts`.
 - **Performance**: Optimized WebRTC flow for minimal voice latency.
