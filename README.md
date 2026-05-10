@@ -4,17 +4,17 @@ A Neobrutalistic AI Portfolio featuring Mira, a tool-enabled voice assistant. Bu
 
 ## Interface
 
-![Home Page](/assets/screenshots/home-page.png)
-_Landing interface with high-contrast bento grid and interactive elements._
+- _Landing page_
+![Home Page](public/assets/screenshots/home-page.png)
 
-![Selected Projects](/assets/screenshots/selected-projects.png)
-_Project showcase highlighting voice-AI and computer vision systems._
+- _Project showcase page_
+![Selected Projects](public/assets/screenshots/selected-projects.png)
 
-![Resume Page](/assets/screenshots/resume-page.png)
-_Centered, optimized professional experience and education layout._
+- _Resume page_
+![Resume Page](public/assets/screenshots/resume-page.png)
 
-![Call Active](/assets/screenshots/call-active.png)
-_Real-time voice interaction interface with Mira._
+- _Voice mode with Mira_
+![Call Active](public/assets/screenshots/call-active.png)
 
 ## Core Features
 
