@@ -1,168 +1,103 @@
 # Portfolio v2 - Prabhudayal Vaishnav
 
-A modern, AI-integrated portfolio website built with Next.js 15, TypeScript, and Three.js, featuring Apple-inspired design language and real-time voice AI capabilities.
+A high-performance, **Neobrutalistic AI Portfolio** featuring a real-time, tool-enabled voice assistant (Mira) built with Next.js 15, TypeScript, and Google Gemini.
 
-## Features
+## 🚀 Features
 
-- **Apple-Inspired Design**: Clean, minimalistic interface with SF Pro Display font, glassmorphism effects, and Apple's dark mode color palette
-- **3D Interactive Lanyard**: Draggable 3D lanyard card on the home page using Three.js and React Three Fiber
-- **Real-time Voice AI**: Chat with an AI assistant about me using Google Gemini's live speech API
-- **Non-Scrollable Pages**: Each page is a full-viewport experience with smooth transitions
-- **Asymmetric Project Carousel**: Showcase projects with a dynamic, visually appealing layout
-- **Liquid Glass Effects**: Social links page with beautiful glassmorphism cards
-- **Resume Download**: Direct PDF download functionality
+- **Neobrutalistic Design System**: A bold, high-contrast interface featuring heavy borders, vibrant accents (#39FF14), and a raw aesthetic optimized for visual impact.
+- **Mira: Real-time Voice AI**: An integrated AI assistant powered by Google Gemini's live speech API. Mira acts as a personal guide, capable of discussing my projects, experience, and skills in real-time.
+- **Voice-Driven Navigation**: Mira can automatically navigate through page routes (Projects, Resume, About) based on your natural language requests.
+- **Multilingual Support**: Real-time voice interaction across multiple languages with automatic detection.
+- **Multi-Device Compatibility**: A fully responsive architecture ensuring a premium experience across mobile, tablet, and desktop devices.
+- **Interactive Bento Grids**: Modern asymmetric layouts with motion-enhanced cards and hover effects.
+- **Battle-Tested Achievements**: Showcase of hackathon wins and research contributions with a "Validated At" spotlight carousel.
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- **Framework**: Next.js 15 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS with custom Apple design tokens
-- **3D Graphics**: Three.js, React Three Fiber, React Three Drei, Rapier (physics)
-- **AI Integration**: Google Gemini AI (@google/genai) for live voice conversations
-- **Icons**: Lucide React
+- **Framework**: Next.js 15 (App Router)
+- **Library**: React 19
+- **Styling**: Tailwind CSS 3 (Custom Neobrutal Design Tokens)
+- **Animations**: Framer Motion 12 & GSAP
+- **AI Integration**: Google Gemini AI (@google/genai)
+- **Icons**: Phosphor Icons (@phosphor-icons/react)
 - **Package Manager**: Bun
 
-## Project Structure
+## 📂 Project Structure
 
 ```
-├── app/                    # Next.js app directory
-│   ├── layout.tsx         # Root layout with Navbar and AI button
-│   ├── page.tsx           # Home page with 3D lanyard
-│   ├── projects/          # Projects showcase page
-│   ├── links/             # Social links page
-│   └── resume/            # Resume download page
-├── components/            # React components
-│   ├── Navbar.tsx         # Glassmorphism navigation bar
-│   ├── TalkAboutMeButton.tsx  # Fixed AI chat button
-│   ├── LiveChatModal.tsx  # Real-time voice chat modal
-│   ├── DraggableLanyard.tsx   # 3D lanyard component
-│   ├── Icons.tsx          # Lucide icon wrappers
-│   └── constants.ts       # Resume data and configurations
-├── services/              # Business logic
-│   └── geminiService.ts   # Google Gemini AI integration
+├── app/                    # Next.js App Router
+│   ├── page.tsx           # Landing page with Bento Grid & IST Clock
+│   ├── resume/            # Centered, optimized resume route
+│   ├── projects/          # Selected works showcase
+│   └── layout.tsx         # Root layout with Mira integration
+├── components/            # React Components
+│   ├── VoiceOrb.tsx       # Interactive voice visualization
+│   ├── LiveChatModal.tsx  # Gemini-powered voice interface
+│   ├── NeoNavbar.tsx      # Neobrutalistic navigation
+│   ├── ISTClock.tsx       # Live Indian Standard Time tracker
+│   └── constants.ts       # Centralized Resume Data (Source of truth)
+├── services/              # Business logic & AI orchestration
 ├── types/                 # TypeScript type definitions
-│   ├── index.ts           # Shared types
-│   ├── google-genai.d.ts  # Gemini AI types
-│   └── three.d.ts         # Three.js extension types
-├── public/                # Static assets
-│   ├── fonts/             # SF Pro Display fonts
-│   ├── docs/              # Project images and resume PDF
-│   ├── lanyard.glb        # 3D model
-│   ├── band.webp           # Lanyard texture
-│   ├── file.svg
-└── tailwind.config.js     # Tailwind with Apple design tokens
+├── public/                # Static assets & images
+└── tailwind.config.js     # Neobrutal design system configuration
 ```
 
-## Getting Started
+## 🏁 Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ or Bun
+- Node.js 18+ or **Bun** (Recommended)
 - Google Gemini API key ([Get one here](https://aistudio.google.com/app/apikey))
 
 ### Installation
 
 1. Clone the repository:
-
 ```bash
-git clone https://github.com/aipdv/next-portfolio-app.git
-cd next-portfolio-app
+git clone https://github.com/aipdv/aipdv.com.git
+cd aipdv.com
 ```
 
 2. Install dependencies:
-
 ```bash
 bun install
-# or
-npm install
 ```
 
 3. Set up environment variables:
-
 ```bash
-cp .env.example .env
-# Edit .env and add your Google Gemini API key
+cp .env.example .env.local
+# Add your NEXT_PUBLIC_GEMINI_API_KEY
 ```
 
 4. Run the development server:
-
 ```bash
 bun dev
-# or
-npm run dev
 ```
 
-5. Open [http://localhost:3000](http://localhost:3000) to view the portfolio
+## 🧠 Mira (AI Assistant)
 
-## Build
+Mira is not just a chatbot; she is a tool-enabled voice agent.
+- **Navigation**: "Show me your projects" -> Mira triggers a router event to `/projects`.
+- **Resume Insight**: "Where did Prabhu work?" -> Mira fetches data from `constants.ts`.
+- **Latency Optimized**: Uses a streamlined WebRTC/WebSocket-like flow for minimal interaction lag.
 
-To create a production build:
+## 🏆 Projects Included
 
-```bash
-bun run build
-# or
-npm run build
-```
-
-To start the production server:
-
-```bash
-bun start
-# or
-npm start
-```
-
-## Design Philosophy
-
-This portfolio follows Apple's Human Interface Guidelines with:
-
-- **SF Pro Display** typography
-- **Dark mode first** approach
-- **Glassmorphism** and liquid glass effects
-- **Subtle animations** and smooth transitions
-- **Minimal color palette** with accent colors (purple, blue)
-- **Non-scrollable** single-page experiences
-
-## Pages
-
-- **About (/)**: Landing page with interactive 3D lanyard
-- **/projects**: Asymmetric grid showcasing 7 major projects
-- **/links**: Social media and contact links with liquid glass cards
-- **/resume**: Resume download page with preview information
-
-## AI Voice Feature
-
-The "Talk about Me" button (fixed bottom-right) opens a real-time voice chat powered by Google Gemini. The AI can:
-
-- Answer questions about my experience, projects, and skills
-- Provide detailed project information
-- Support multilingual conversations
-- Use Google Search for general questions
-
-## Projects Included
-
-1. **Grand Plaza**: Voice AI Hotel Concierge System (FastAPI, LangGraph, WebRTC)
-2. **Career Scout**: Voice AI Job Search Assistant (Next.js, Supabase)
-3. **The AI Scientist**: Sakana AI Open Source Contribution (Python, LLMs)
+1. **Grand Plaza**: Voice AI Hotel Concierge System (FastAPI, LangGraph)
+2. **Career Scout**: Voice AI-Powered Job Search Assistant (Next.js, Supabase)
+3. **The AI Scientist**: Sakana AI Contributor (Open Source)
 4. **XGen-AI**: RAG Telegram Bot (Python, Meta LLAMA 3.1)
-5. **XAdmin**: Remote Access Bot (Python, Telegram API)
-6. **xFace**: Emotion Detection Bot (Python, OpenCV)
-7. **MetroCart**: E-Commerce Website (HTML, CSS, JavaScript)
+5. **xFace**: Emotion Detection Computer Vision Bot
 
-## Contributing
-
-This is a personal portfolio project, but feel free to fork it and adapt it for your own use!
-
-## License
+## 📄 License
 
 MIT
 
-## Contact
+## 🤝 Contact
 
-- **GitHub**: [aipdv](https://github.com/aipdv)
+- **Portfolio**: [aipdv.com](https://aipdv.com)
 - **LinkedIn**: [aipdv](https://www.linkedin.com/in/aipdv)
 - **Email**: hi@aipdv.com
 
 ---
 
-Built with 💖 using Next.js, TypeScript, and Three.js
+Built with 💚 and Logic by Prabhudayal Vaishnav
