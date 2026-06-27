@@ -12,7 +12,7 @@ export const startLiveConversation = async (
 ): Promise<any> => {
     // Dynamically import the Web SDK
     const { GoogleGenAI } = await import('@google/genai/web');
-    const { getGeminiConfig } = await import('@/app/actions/gemini-config');
+    const { getGeminiConfig } = await import('@/lib/gemini-config');
 
     const apiKey = process.env.NEXT_PUBLIC_API_KEY;
     if (!apiKey) {

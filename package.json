@@ -11,20 +11,13 @@
   "dependencies": {
     "@google/genai": "^1.35.0",
     "@phosphor-icons/react": "^2.1.10",
-    "@radix-ui/react-progress": "^1.1.8",
-    "@radix-ui/react-slot": "^1.2.4",
-    "@react-three/drei": "^10.7.7",
-    "@react-three/fiber": "^9.5.0",
     "@tabler/icons-react": "^3.36.0",
-    "@types/three": "^0.182.0",
     "@vercel/analytics": "^2.0.1",
     "autoprefixer": "^10.4.21",
     "caniuse-lite": "^1.0.30001753",
-    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dotenv": "^17.2.3",
     "framer-motion": "^12.29.0",
-    "gsap": "^3.14.2",
     "mime": "^4.1.0",
     "next": "15.3.6",
     "postcss": "^8.5.3",
@@ -33,7 +26,6 @@
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "3",
     "tailwindcss-animate": "^1.0.7",
-    "three": "^0.182.0",
     "vercel": "^52.0.0"
   },
   "devDependencies": {
