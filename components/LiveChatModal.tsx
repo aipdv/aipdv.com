@@ -549,6 +549,25 @@ export default function LiveChatModal({ onClose }: { onClose: () => void }) {
         sessionRef.current = session;
         console.log('✅ Live conversation initialized');
 
+        // Make the voice agent speak first by sending an initial greeting prompt
+        try {
+          session.sendClientContent({
+            turns: [
+              {
+                role: 'user',
+                parts: [
+                  {
+                    text: "Hello! Introduce yourself to the visitor who just opened your voice interface. Keep it warm, friendly, and very brief (1-2 sentences)."
+                  }
+                ]
+              }
+            ],
+            turnComplete: true
+          });
+        } catch (e) {
+          console.error('❌ Failed to send initial greeting trigger:', e);
+        }
+
       } catch (err) {
         console.error('❌ Initialization error:', err);
         setStatus('Failed to initialize. Check microphone permissions.');

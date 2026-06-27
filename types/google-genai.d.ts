@@ -27,7 +27,9 @@ declare module '@google/genai' {
 
   export interface LiveSession {
     close(): void;
-    sendRealtimeInput(input: { media: Blob }): Promise<void>;
+    sendRealtimeInput(input: { media?: Blob; audio?: Blob }): void | Promise<void>;
+    sendClientContent(params: { turns?: any[]; turnComplete?: boolean }): void;
+    sendToolResponse(params: { functionResponses?: any[] }): void;
   }
 
   export interface Blob {

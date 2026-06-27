@@ -347,6 +347,25 @@ export default function VoiceOrb({ isActiveProp = false, onRequestOpen, onNaviga
       });
 
       sessionRef.current = session;
+
+      // Make the voice agent speak first by sending an initial greeting prompt
+      try {
+        session.sendClientContent({
+          turns: [
+            {
+              role: 'user',
+              parts: [
+                {
+                  text: "Hello! Introduce yourself to the visitor who just opened your voice interface. Keep it warm, friendly, and very brief (1-2 sentences)."
+                }
+              ]
+            }
+          ],
+          turnComplete: true
+        });
+      } catch (e) {
+        console.error('Failed to send initial greeting trigger:', e);
+      }
     } catch (err: any) {
       console.error('Initialization error:', err);
       setErrorMessage('Mic access denied. Check permissions.');
