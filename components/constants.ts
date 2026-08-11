@@ -1,5 +1,5 @@
 import { ResumeData } from '../types';
-import { GithubLogo as Github, LinkedinLogo as Linkedin, Code as Code2, InstagramLogo as Instagram, Envelope as Mail, TwitterLogo as Twitter, Calendar } from '@phosphor-icons/react/ssr';
+import { GithubLogo as Github, LinkedinLogo as Linkedin, Code as Code2, Envelope as Mail, TwitterLogo as Twitter, Calendar } from '@phosphor-icons/react/ssr';
 
 export const RESUME_DATA: ResumeData = {
   name: "Prabhudayal Vaishnav",
@@ -11,7 +11,6 @@ export const RESUME_DATA: ResumeData = {
       { name: "LinkedIn", url: "https://www.linkedin.com/in/aipdv", icon: Linkedin },
       { name: "Twitter", url: "https://x.com/globalxprada", icon: Twitter },
       { name: "LeetCode", url: "https://leetcode.com/u/global-prada", icon: Code2 },
-      { name: "Instagram", url: "https://www.instagram.com/aipdvcom", icon: Instagram },
       { name: "Email", url: "mailto:hi@aipdv.com", icon: Mail },
       { name: "Cal.com", url: "https://cal.com/ai.pdv", icon: Calendar },
     ],
