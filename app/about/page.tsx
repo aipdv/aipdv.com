@@ -1,7 +1,7 @@
 'use client';
 
 import { RESUME_DATA } from "@/components/constants";
-import { User, Envelope as Mail, Stack as Layers, GameController as Gamepad2, Globe, ArrowUpRight, GithubLogo as Github, LinkedinLogo as Linkedin, TwitterLogo as Twitter, RocketLaunch as Rocket, Handshake } from '@phosphor-icons/react';
+import { User, Stack as Layers, GameController as Gamepad2 } from '@phosphor-icons/react';
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from 'framer-motion';

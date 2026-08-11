@@ -18,7 +18,7 @@ export const getGeminiConfig = () => {
             properties: {
               page: {
                 type: "string",
-                enum: ["about", "contact", "links", "projects", "resume", "home", "research"],
+                enum: ["about", "contact", "links", "projects", "resume", "home"],
                 description: "The portfolio page to navigate to"
               }
             },

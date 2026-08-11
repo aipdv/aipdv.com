@@ -4,10 +4,10 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { RESUME_DATA } from '@/components/constants';
 import { ArrowUpRight, Terminal } from '@phosphor-icons/react';
-import { motion } from '@/components/motion-client';
+import { motion } from 'framer-motion';
 
 export default function ProjectsClient() {
-    const [filter, setFilter] = useState<'All' | 'Full Stack' | 'AI' | 'Experimental'>('All');
+    const [filter, setFilter] = useState<'All' | 'Full Stack' | 'AI'>('All');
 
     const filteredProjects = RESUME_DATA.projects.filter(project => {
         if (filter === 'All') return true;
@@ -16,7 +16,6 @@ export default function ProjectsClient() {
 
         if (filter === 'Full Stack') return tags.some(t => t.includes('react') || t.includes('next') || t.includes('web'));
         if (filter === 'AI') return tags.some(t => t.includes('ai') || t.includes('python') || t.includes('langgraph') || t.includes('gpt'));
-        if (filter === 'Experimental') return tags.some(t => t.includes('three') || t.includes('webgl') || t.includes('experimental'));
 
         return true;
     });

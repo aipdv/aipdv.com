@@ -1,8 +1,8 @@
 "use client";
 
 import { RESUME_DATA } from "@/components/constants";
-import { Envelope as Mail, Clock, MapPin, ArrowUpRight, GithubLogo as Github, LinkedinLogo as Linkedin, TwitterLogo as Twitter, RocketLaunch as Rocket, Globe } from '@phosphor-icons/react';
-import { motion } from "@/components/motion-client";
+import { Envelope as Mail, Clock, ArrowUpRight, RocketLaunch as Rocket, Globe } from '@phosphor-icons/react';
+import { motion } from "framer-motion";
 
 export default function ContactPage() {
     const { contact } = RESUME_DATA;
@@ -122,10 +122,9 @@ export default function ContactPage() {
                                             <span className="text-[10px] md:text-xs font-mono opacity-60 block">
                                                 {link.name === 'LinkedIn' ? 'Professional' :
                                                     link.name === 'GitHub' ? 'Code Repos' :
-                                                        link.name === 'Twitter' ? 'Thoughts' :
-                                                            link.name === 'Instagram' ? 'Social' :
-                                                                link.name === 'LeetCode' ? 'Coding' :
-                                                                    'Connect'}
+                                                        link.name === 'Twitter' ? 'Social' :
+                                                            link.name === 'LeetCode' ? 'Coding' :
+                                                                'Web'}
                                             </span>
                                         </div>
                                     </a>

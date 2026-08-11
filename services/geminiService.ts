@@ -22,7 +22,7 @@ export const startLiveConversation = async (
     const ai = new GoogleGenAI({ apiKey });
     
     // Fetch config from server
-    const serverConfig = await getGeminiConfig();
+    const serverConfig = getGeminiConfig();
     const model = serverConfig.model;
 
     const config = {

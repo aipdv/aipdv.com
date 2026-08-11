@@ -8,7 +8,7 @@ import NeoFooter from './NeoFooter';
 
 const VoiceOrb = dynamic(() => import('./VoiceOrb'), { ssr: false });
 const BetaWarningModal = dynamic(() => import('./BetaWarningModal'), { ssr: false });
-// import { ProgressiveBlur } from './ui/progressive-blur'; // Might clash with design, commenting out for now or removing.
+
 
 export default function ClientLayout({
   children,
