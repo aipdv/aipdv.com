@@ -1,7 +1,6 @@
-'use server';
 import { SYSTEM_INSTRUCTION } from "@/components/constants";
 
-export async function getGeminiConfig() {
+export const getGeminiConfig = () => {
   return {
     systemInstruction: {
       parts: [{
@@ -9,7 +8,6 @@ export async function getGeminiConfig() {
       }]
     },
     model: 'models/gemini-3.1-flash-live-preview',
-    // Config matches GoogleGenAI.LiveConfig
     config: {
       tools: [{
         functionDeclarations: [{
@@ -20,7 +18,7 @@ export async function getGeminiConfig() {
             properties: {
               page: {
                 type: "string",
-                enum: ["about", "contact", "links", "projects", "resume", "home", "research"],
+                enum: ["about", "contact", "links", "projects", "resume", "home"],
                 description: "The portfolio page to navigate to"
               }
             },
@@ -36,7 +34,6 @@ export async function getGeminiConfig() {
           }
         }
       },
-      // Hardcoded for now as server doesn't import from web SDK
       mediaResolution: "MEDIA_RESOLUTION_MEDIUM",
       activity_handling: {
           mode: "START_OF_ACTIVITY_INTERRUPTS" 
@@ -48,4 +45,4 @@ export async function getGeminiConfig() {
       outputTranscription: { model: "gemini-3.1-flash-lite-preview" }, 
     }
   };
-}
+};

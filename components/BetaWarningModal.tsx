@@ -11,24 +11,14 @@ interface BetaWarningModalProps {
 
 export default function BetaWarningModal({ onClose, onStart }: BetaWarningModalProps) {
     const router = useRouter();
-    const [isBlinkingStart, setIsBlinkingStart] = useState(false);
-    const [isBlinkingLinks, setIsBlinkingLinks] = useState(false);
 
     const handleLinks = () => {
-        setIsBlinkingLinks(true);
-        setTimeout(() => {
-            setIsBlinkingLinks(false);
-            router.push('/links');
-            onClose();
-        }, 200);
+        router.push('/links');
+        onClose();
     };
 
     const handleStart = () => {
-        setIsBlinkingStart(true);
-        setTimeout(() => {
-            setIsBlinkingStart(false);
-            onStart();
-        }, 200);
+        onStart();
     };
 
     return (
@@ -65,10 +55,7 @@ export default function BetaWarningModal({ onClose, onStart }: BetaWarningModalP
                     {/* Start Voice Chat (Primary) */}
                     <button
                         onClick={handleStart}
-                        className={`
-                            h-14 flex items-center justify-center gap-3 px-6 font-black text-base border-2 border-border transition-all duration-200 uppercase tracking-wide btn-neo bg-primary
-                            ${isBlinkingStart ? 'animate-blink' : ''}
-                        `}
+                        className="h-14 flex items-center justify-center gap-3 px-6 font-black text-base border-2 border-border transition-all duration-200 uppercase tracking-wide btn-neo bg-primary active:scale-95"
                     >
                         <Mic weight="bold" size={20} />
                         Start Voice Chat
@@ -77,10 +64,7 @@ export default function BetaWarningModal({ onClose, onStart }: BetaWarningModalP
                     {/* Go to Links (Secondary) */}
                     <button
                         onClick={handleLinks}
-                        className={`
-                            h-14 flex items-center justify-center gap-3 px-6 font-black text-base border-2 border-border transition-all duration-200 uppercase tracking-wide btn-neo
-                            ${isBlinkingLinks ? 'animate-blink' : ''}
-                        `}
+                        className="h-14 flex items-center justify-center gap-3 px-6 font-black text-base border-2 border-border transition-all duration-200 uppercase tracking-wide btn-neo active:scale-95"
                     >
                         <LinkIcon weight="bold" size={20} />
                         Visit Links Page
